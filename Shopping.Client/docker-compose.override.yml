@@ -5,7 +5,7 @@ services:
     container_name: shoppingapi # container name given, so that client can connect using container name instead of localhost
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
-      - "DatabaseSettings:ConnectionString=mongodb://shoppingdb:27017"  #overriding the connection string which is appsettings,database is local there,we change it shoppingdb
+      - "DatabaseSettings:ConnectionString=mongodb://shoppingdb:27017"  #overriding the connection string which is appsettings,database is local there,we change it shoppingdb which is container name
     depends_on: # api is dependent on database,container mongo db is created first before api container is created
       - shopping.db
     ports:
