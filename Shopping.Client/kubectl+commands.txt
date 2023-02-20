@@ -30,10 +30,8 @@ kubectl port-forward swn-nginx 8080:80
 kubectl delete deployment swn-nginx
 kubectl get pods --watch
 ---------
-
-kubectl create
-	-- there is no pod 
-	so its abraction from deployment so we should create deployment
+---------------------Create Deployments ------------------------------------------------
+---------------Deploying an image using deployment,it itself creates relicate sets and pods---------------------------------------------
 
 kubectl create deployment name --image=image [--dry-run] [options]
 kubectl create deployment nginx-depl --image=nginx
@@ -47,7 +45,7 @@ Debugging Pods
 kubectl logs nginx-depl-5c8bf76b5b-tzv2k
 
 -- create new depl - mongo
-kubectl create deployment mongo-depl --image=mongo  --->Create a deployement using mongodb image
+kubectl create deployment mongo-depl --image=mongo  --->Create a deployement using mongodb image from local docker
 kubectl get pod
 kubectl describe pod mongo-depl-5fd6b7d4b4-6xzjd
 kubectl logs mongo-depl-5fd6b7d4b4-6xzjd
